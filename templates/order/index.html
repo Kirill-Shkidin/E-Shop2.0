@@ -1,0 +1,33 @@
+{% include 'header.html' %}
+
+  <a href="index.php" class="first-block container back-button">
+    <img src="img/core-img/arrowLeft.svg" alt="arrowLeft">Back to store</a>
+
+  <table class="cartTable">
+    <thead>
+    <tr>
+      <td>id_user</td>
+      <td>datetime_create</td>
+      <td>id_order_status</td>
+    </tr>
+    </thead>
+    <tbody>
+
+    {%for order in content_data%}
+
+<!--    <tr>-->
+<!--      <td colspan="7" style="padding: 20px; color: #B2B2B2">id user = {{ order['id_order'] }}</td>-->
+<!--    </tr>-->
+    <tr class="cart-item" id="{{ order['id'] }}">
+      <td>{{ order['id_user'] }}</td>
+      <td>{{ order['datetime_create'] }}</td>
+      <td>{{ order['id_order_status'] }}</td>
+
+    </tr>
+
+    {% endfor %};
+
+    </tbody>
+  </table>
+
+{% include 'footer.html' %}

@@ -1,0 +1,24 @@
+{% include 'header.html' %}
+
+<section class="container goodContent first-block">
+  <div class="imageBlock">
+    <img src="{{ content_data.0.src_1 }}" alt="{{ content_data.0.name }}">
+  </div>
+  <div class="detailsBlock">
+    <h1>{{ content_data.0.name }}</h1>
+    <span class="priceGoodPage">${{ content_data.0.price }}</span>
+    <p>Quantity:</p>
+    <div class="amount">
+      <div class=" white-button amountControls">
+        <span onclick="decreaseAmount({{ content_data.0.id_good }})" class="plusMinusControls">-</span>
+        <input type="text" value="1" id="amount{{ content_data.0.id_good }}">
+        <span onclick="increaseAmount({{ content_data.0.id_good }})" class="plusMinusControls">+</span>
+      </div>
+    </div>
+    <p><input type="button" value='Add to cart' onclick="addToCart({{ content_data.0.id_good }})"
+              class="add-to-basket">
+    </p>
+  </div>
+</section>
+
+{% include 'footer.html' %}

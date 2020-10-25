@@ -1,0 +1,47 @@
+{% include 'header.html' %}
+
+{% if content_data.loggedIn == true  %}
+
+<a href="index.php" class="first-block container back-button">
+  <img src="img/core-img/arrowLeft.svg" alt="arrowLeft">Back to store</a>
+<div class="main-block container">
+  <div class="log-in-block">
+    <h1>Welcome, {{ content_data.name }} !</h1>
+    <p>Lorem Ipsum is simply dummy text of the printing
+      and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+    {% if content_data.role == 1 %}
+    <button class="white-button"><a href="index.php?path=admin/index">Admin Panel</a></button>
+    {% endif %}
+
+    <form method="post">
+      <input type="submit" name="logOut" value="Log Out" class="white-button">
+    </form>
+  </div>
+</div>
+
+{% else %}
+
+<a href="index.php" class="container back-button">
+  <img src="img/core-img/arrowLeft.svg" alt="arrowLeft">Back to store</a>
+<div class="main-block container">
+  <div class="log-in-block">
+    <h1>Log In</h1>
+    <p>Lorem Ipsum is simply dummy text of the printing
+      and typesetting industry. Lorem Ipsum has been the
+      industry's standard dummy text ever since the 1500s
+      <br>admin 123</p>
+    <form method="post">
+      <input type="text" name="login" placeholder="E-mail" value="">
+      <input type="password" name="password" placeholder="Password" value="">
+      <div style="margin-top: 15px; color: #FF0000" class="massage">
+        {{content_data.massage }}
+      </div>
+      <input type="submit" name="enter" value="Sign In" class="main-color-button">
+      <p>Not a member yet? <input type="submit" name="reg" value="Sign Up" class="white-button"></p>
+    </form>
+  </div>
+</div>
+
+{% endif %}
+
+{% include 'footer.html' %}

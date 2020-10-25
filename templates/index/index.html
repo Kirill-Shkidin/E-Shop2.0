@@ -1,0 +1,40 @@
+{% include 'header.html' %}
+
+<section class="container breadcrumbs clear first-block">
+  <ul>
+    <li><a href="index.php"><img src="img/core-img/home.svg" alt="home"></a></li>
+    <li>/</li>
+    <li><a href="#">All products</a></li>
+  </ul>
+</section>
+<section class="mainContent container">
+  <div class="productFilters" style="width: 310px; height: 810px; border: 1px #E2E2E2 solid; padding: 15px">
+    Filters
+  </div>
+  <div class="products">
+    <div class="topSection">
+      <h2>Men's Tops&nbsp;<span>(133)</span></h2>
+      <div class="controls">
+        <span>Show products:</span>
+        <select name="amountOnPage" id="amountOnPage"
+                onChange="changeAmountOnPage(this.options[this.selectedIndex].value)">
+          <option value="30" selected>30</option>
+          <option value="45">45</option>
+          <option value="60">60</option>
+        </select>
+        <span>Sort:</span>
+        <select name="productSort">
+          <option value="Popular" selected>Popular</option>
+          <option value="Newest">Newest</option>
+          <option value="Price">Price</option>
+        </select>
+      </div>
+    </div>
+    <div class="productList"></div>
+    <button class="white-button" style="margin: 0 auto; display: block"
+            onclick="changeAmountOnPage(document.getElementById('amountOnPage').value, 25)">More
+    </button>
+  </div>
+</section>
+
+{% include 'footer.html' %}

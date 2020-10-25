@@ -1,0 +1,11 @@
+{% include 'header.html' %}
+<h1 class="container first-block">Control</h1>
+<div class="container">
+  <ul>
+    {% for key,control in content_data.controls %}
+    <li><a href="/admin/control/{{ key }}/">{{ control }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
+
+{% include 'footer.html' %}

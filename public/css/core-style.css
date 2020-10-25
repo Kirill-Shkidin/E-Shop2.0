@@ -1,0 +1,496 @@
+/* :: :: 1.0 Import Fonts */
+@font-face {
+  font-family: "poppinsBold";
+  src: url("../fonts/Poppins/Poppins-Bold.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "poppinsSemiBold";
+  src: url("../fonts/Poppins/Poppins-SemiBold.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "poppinsReg";
+  src: url("../fonts/Poppins/Poppins-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "poppinsLight";
+  src: url("../fonts/Poppins/Poppins-Light.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "camptonMedium";
+  src: url("../fonts/Campton/Campton-Medium.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+/* :: 2.0 Import All CSS (from frameworks)*/
+/* :: 3.0 Base CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "poppinsReg";
+  font-size: 16px;
+}
+
+h1 {
+  color: #242424;
+  font-family: "poppinsSemiBold";
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #242424;
+  font-family: "poppinsLight";
+}
+
+p {
+  color: #131212;
+}
+
+a {
+  -webkit-transition: all 500ms ease 0s;
+  transition: all 500ms ease 0s;
+  text-decoration: none;
+  outline: 0 solid transparent;
+  color: #131212;
+}
+a:hover, a:focus {
+  -webkit-transition: all 500ms ease 0s;
+  transition: all 500ms ease 0s;
+  text-decoration: none;
+  outline: 0 solid transparent;
+  color: #131212;
+}
+
+ul,
+ol {
+  margin: 0;
+}
+ul li,
+ol li {
+  list-style: none;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+.clear {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.first-block {
+  margin-top: 110px;
+}
+
+.margin-left-25 {
+  margin-left: 25px;
+}
+
+input {
+  outline: none;
+  cursor: pointer;
+}
+input:active {
+  outline: none;
+}
+
+.white-button {
+  padding: 0 30px 0 30px;
+  height: 50px;
+  border-radius: 50px;
+  border: 1px #E2E2E2 solid;
+  font-family: "poppinsSemiBold";
+  font-size: 13px;
+  color: #242424;
+  text-transform: uppercase;
+  align-items: center;
+  cursor: pointer;
+}
+
+.main-color-button {
+  padding: 15px 35px 15px 35px;
+  border-radius: 50px;
+  border: none;
+  background-color: #FBB03B;
+  font-family: "poppinsSemiBold";
+  font-size: 13px;
+  color: #242424;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+/* :: 4.0 Header Area CSS */
+header {
+  height: 110px;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  border-bottom: 1px #E2E2E2 solid;
+  justify-content: space-between;
+  background: #ffffff;
+}
+
+.logo {
+  font-family: "camptonMedium";
+  font-size: 19px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 139px;
+}
+.logo img {
+  padding-right: 24px;
+}
+.logo ::first-letter {
+  color: #FBB03B;
+}
+
+.container {
+  padding: 0 160px;
+  width: 100%;
+  display: flex;
+}
+
+.menu, .right-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "poppinsSemiBold";
+  font-size: 14px;
+}
+.menu li:not(:first-child):not(:last-child), .right-menu li:not(:first-child):not(:last-child) {
+  padding: 0 35px;
+}
+
+/* :: 5.0 Breadcrumbs Area CSS */
+.breadcrumbs {
+  font-size: 13px;
+  color: #B2B2B2;
+}
+.breadcrumbs ul {
+  padding-top: 30px;
+  display: flex;
+}
+.breadcrumbs ul li:not(:first-child):not(:last-child) {
+  padding: 0 8px;
+}
+.breadcrumbs ul a {
+  color: #B2B2B2;
+}
+
+/* :: 6.0 Product List Area CSS */
+.mainContent {
+  justify-content: space-between;
+  margin-top: 35px;
+}
+
+.productFilters {
+  margin-top: 12px;
+}
+
+.products {
+  width: 100%;
+  margin-left: 35px;
+}
+
+.topSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.topSection .controls {
+  display: inherit;
+  align-items: center;
+}
+.topSection .controls select {
+  margin-left: 20px;
+  padding: 13px 25px 12px 20px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  background: url("../img/core-img/arrowDown.svg") no-repeat 80% center;
+  outline: 0;
+  border-radius: 50px;
+}
+.topSection .controls select:last-child {
+  padding-right: 40px;
+}
+.topSection .controls img {
+  align-items: center;
+  padding: 5px;
+}
+.topSection .controls .line {
+  padding: 15px 5px;
+}
+.topSection .controls span {
+  padding-left: 40px;
+}
+.topSection .controls a {
+  display: inherit;
+}
+.topSection .controls .passive {
+  padding: 10px;
+}
+.topSection h2 span {
+  color: #B2B2B2;
+}
+
+.productList {
+  padding-top: 35px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.good {
+  width: 270px;
+  padding-bottom: 85px;
+}
+.good .img-container {
+  height: 463px;
+}
+
+.good-name {
+  padding-top: 25px;
+  font-size: 16px;
+  font-family: "poppinsLight";
+}
+
+.price {
+  font-family: "poppinsReg";
+  font-size: 19px;
+  padding-top: 5px;
+}
+
+.add-to-basket {
+  padding: 15px 50px;
+  margin-top: 5px;
+  border-radius: 50px;
+  background-color: #FBB03B;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-family: "poppinsSemiBold";
+  font-size: 13px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.add-to-basket:active {
+  outline: none;
+}
+
+/* :: 7.0 Cart Area CSS */
+.cart-header {
+  padding-top: 45px;
+}
+
+.cartTable {
+  padding: 35px 160px 0 160px;
+  width: 100%;
+}
+.cartTable thead {
+  color: #B2B2B2;
+}
+.cartTable thead tr {
+  vertical-align: top;
+  height: 50px;
+}
+.cartTable td:last-child img {
+  display: block;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.cart-item td a {
+  font-family: "poppinsSemiBold";
+}
+.cart-item td span {
+  font-family: "poppinsLight";
+  font-size: 13px;
+  color: #C4C4C4;
+}
+.cart-item td:first-child img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+.cart-item .price {
+  width: 50px;
+  font-family: "poppinsSemiBold";
+  font-size: 16px;
+}
+
+.amount .amountControls {
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.amount .amountControls span {
+  color: #B2B2B2;
+}
+.amount .amountControls span:last-child {
+  color: #131212;
+}
+.amount .plusMinusControls {
+  font-size: 30px;
+  cursor: pointer;
+}
+.amount input {
+  font-size: 16px;
+  text-align: center;
+  width: 25px;
+  border: none;
+  cursor: unset;
+  font-family: "poppinsSemiBold";
+}
+
+.back-button {
+  padding-top: 50px;
+}
+.back-button img {
+  padding-right: 25px;
+}
+
+.bottom-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin: 75px 0 190px 0;
+}
+.bottom-controls .promo-code {
+  font-family: "poppinsReg";
+  text-transform: none;
+  padding: 15px 10px 15px 35px;
+  cursor: unset;
+}
+.bottom-controls img {
+  position: absolute;
+  top: 20px;
+  left: 310px;
+  cursor: pointer;
+}
+.bottom-controls p {
+  font-family: "poppinsLight";
+}
+.bottom-controls span {
+  padding-left: 30px;
+  font-family: "poppinsSemiBold";
+}
+
+/* :: 8.0 Authorization Page CSS */
+.log-in-block {
+  width: 450px;
+  margin: 0 auto;
+  padding-top: 60px;
+  text-align: center;
+}
+.log-in-block h1 {
+  width: 100%;
+}
+.log-in-block p {
+  width: 360px;
+  margin: 0 auto;
+  padding-top: 25px;
+}
+.log-in-block form {
+  padding-top: 40px;
+}
+.log-in-block form input:not(:last-child):not([type=checkbox]) {
+  margin-top: 15px;
+  width: 100%;
+  height: 55px;
+}
+.log-in-block form input:not(:last-child):not([type=checkbox]):not([type=submit]) {
+  padding-left: 40px;
+  border-radius: 50px;
+  border: 1px #E2E2E2 solid;
+  font-family: "poppinsReg";
+  font-size: 13px;
+}
+.log-in-block form input:last-child {
+  border: none;
+  font-family: "poppinsSemiBold";
+  font-size: 13px;
+  padding-left: 30px;
+}
+.log-in-block form input[type=checkbox] {
+  margin-top: 25px;
+}
+.log-in-block form label {
+  font-size: 13px;
+  padding-left: 15px;
+}
+
+/* :: 9.0 Good Page CSS */
+.goodContent {
+  padding-top: 45px;
+}
+.goodContent .detailsBlock {
+  padding-left: 110px;
+}
+.goodContent .detailsBlock h1 {
+  font-family: "poppinsLight";
+  font-size: 30px;
+}
+.goodContent .detailsBlock .priceGoodPage {
+  font-size: 30px;
+}
+
+/* :: 10.0 Footer Page CSS */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px #E2E2E2 solid;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-top: 100px;
+}
+
+.footerMenu {
+  font-size: 13px;
+}
+.footerMenu li:not(:last-child) {
+  padding-bottom: 5px;
+}
+.footerMenu li:first-child {
+  font-family: "poppinsSemiBold";
+  padding-bottom: 35px;
+}
+
+.companyInfo {
+  padding-right: 50px;
+}
+.companyInfo p {
+  width: 410px;
+  font-size: 13px;
+  padding-top: 20px;
+  padding-bottom: 35px;
+  color: #B2B2B2;
+}
+.companyInfo a:not(:first-child) {
+  padding-right: 35px;
+}
+
+/*# sourceMappingURL=core-style.css.map */

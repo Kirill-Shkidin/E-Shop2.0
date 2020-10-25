@@ -1,0 +1,37 @@
+{% include 'header.html' %}
+<div class="topSection first-block cart-header container">
+  <h1>Shopping Cart</h1>
+  <div class="controls">
+    <a href="#"><img src="img/core-img/cartActive.svg" alt="cartActive"></a>
+    <img src="img/core-img/lineGray.svg" alt="lineGray" class="line">
+    <a href="#"><img src="img/core-img/delivery.svg" alt="delivery" class="passive"></a>
+    <img src="img/core-img/lineGray.svg" alt="lineGray" class="line">
+    <a href="#"><img src="img/core-img/payment.svg" alt="payment" class="passive"></a>
+  </div>
+</div>
+
+<table class="cartTable">
+  <thead>
+  <tr>
+    <td colspan="2">Product</td>
+    <td>Color</td>
+    <td>Size</td>
+    <td>Amount</td>
+    <td colspan="2">Price</td>
+  </tr>
+  </thead>
+  <tbody class="cartList">
+
+  </tbody>
+</table>
+<div class="bottom-controls container">
+  <input type="text" placeholder="Promo Code" class="white-button promo-code">
+  <img src="img/core-img/send.svg" alt="send">
+  <p>Total cost <span class="cartSum"></span></p>
+  <div>
+    <input type="button" value="Continue shopping" class="white-button">
+    <input type="button" value="Next step" class="main-color-button margin-left-25">
+  </div>
+</div>
+
+{% include 'footer.html' %}
